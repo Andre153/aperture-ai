@@ -23,6 +23,7 @@ Topic ──▶ Gather Sources ──▶ Branch (depth) ──▶ Write Report �
 | **Workflow** | 5-step pipeline with `.then()`, `.branch()`, `.map()` |
 | **Custom Scorer** | `reportQualityScorer` — 4-phase evaluation pipeline |
 | **Dataset** | 6 news topic test cases for running experiments |
+| **Observability** | Tracing via `@mastra/observability` with ALWAYS sampling |
 | **Studio** | Full local dev setup via `mastra dev` |
 
 ## Setup
@@ -80,12 +81,14 @@ src/mastra/
 ├── agents/                         # Researcher, Writer, Editor
 ├── tools/                          # NewsAPI.org + Guardian API integrations
 ├── workflows/                      # Multi-step news report workflow
-└── scorers/                        # Custom report quality scorer
+├── scorers/                        # Custom report quality scorer
+└── types/                          # Shared Zod schemas (ArticleSchema)
 scripts/
 └── seed-dataset.ts                 # Seeds test cases into the dataset
 docs/
 ├── workflow.md                     # Detailed workflow documentation with diagrams
-└── llm-models.md                   # Model selection strategy and rationale
+├── llm-models.md                   # Model selection strategy and rationale
+└── roadmap.md                      # Product roadmap and future phases
 ```
 
 ## Documentation
